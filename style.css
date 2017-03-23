@@ -8,7 +8,7 @@ ul {
 img {
     display: inline;
     width: 200px;
-    height: 100px;
+    height: 66px;
 }
 #footer {
     width: 100%;
@@ -16,4 +16,18 @@ img {
     background-color: white;
     position: fixed;
     bottom: 0;
+}
+
+#guesses ul li{
+  display: inline;
+  border: 2px solid;
+  border-radius: 15%;
+  font-size: 45px;
+  padding: 3px 20px;
+  margin: 5px;
+  text-align: center;
+}
+
+#player-input, #submit{
+  border-radius: 100%;
 }
