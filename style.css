@@ -10,6 +10,13 @@ img {
     width: 230px;
     height: 76px;
 }
+body{
+  background-image: url("guess.png");
+}
+
+#headers{
+  background-color: rgba(255, 255, 255, .93);
+}
 #footer {
     width: 100%;
     border-top: solid 2px black;
@@ -26,6 +33,7 @@ img {
   padding: 3px 20px;
   margin: 5px;
   text-align: center;
+  background-color: white;
 }
 
 #player-input, #submit{
@@ -44,7 +52,9 @@ img {
   left: 110px;
   width: 50px;
   height: 50px;
-  background-color: #44DD44;
+  background-color: #1A8E1A;
+  color: white;
+  font-size: 16px;
 }
 
 #name{
@@ -53,11 +63,13 @@ img {
 }
 
 #reset{
-  background-color: #F99494;
+  background-color: #BB2424;
+  color: white;
 }
 
 #hint{
-  background-color: #A8C9FD;
+  background-color: #1B5ABB;
+  color: white;
 }
 
 #input-parent{
