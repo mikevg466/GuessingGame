@@ -7,8 +7,8 @@ ul {
 }
 img {
     display: inline;
-    width: 200px;
-    height: 66px;
+    width: 230px;
+    height: 76px;
 }
 #footer {
     width: 100%;
@@ -18,7 +18,7 @@ img {
     bottom: 0;
 }
 
-#guesses ul li{
+#guesses li{
   display: inline;
   border: 2px solid;
   border-radius: 15%;
@@ -30,4 +30,37 @@ img {
 
 #player-input, #submit{
   border-radius: 100%;
+}
+
+#player-input{
+  width: 160px;
+  height: 160px;
+  font-size: 50px;
+}
+
+#submit{
+  position: relative;
+  top: -40px;
+  left: 110px;
+  width: 50px;
+  height: 50px;
+  background-color: #44DD44;
+}
+
+#name{
+  position: relative;
+  top: 18px;
+}
+
+#reset{
+  background-color: #F99494;
+}
+
+#hint{
+  background-color: #A8C9FD;
+}
+
+#input-parent{
+  width: 160px;
+  margin: 0 auto;
 }
