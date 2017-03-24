@@ -14,8 +14,11 @@ body{
   background-image: url("guess.png");
 }
 
+#app{
+  background-color: rgba(255, 255, 255, .5);
+}
 #headers{
-  background-color: rgba(255, 255, 255, .93);
+  background-color: rgba(255, 255, 255, .85);
 }
 #footer {
     width: 100%;
