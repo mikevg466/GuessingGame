@@ -11,7 +11,7 @@ img {
     height: 76px;
 }
 body{
-  background-image: url("guess.png");
+  background: #FFFFFF url("guess.png") top left repeat;
 }
 
 #app{
