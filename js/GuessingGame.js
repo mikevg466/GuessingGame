@@ -104,6 +104,7 @@ $(document).ready(function(){
     if(game.pastGuesses.length < 5){
       submitAnswer();
     }
+    $("#player-input").val("");
   });
 
   $("#reset").on("click", function(event){
