@@ -11,7 +11,14 @@ img {
     height: 76px;
 }
 body{
-  background: #FFFFFF url("guess.png") top left repeat;
+  background: #FFFFFF url("../img/guess.png") top left repeat;
+}
+
+#answer{
+  display: none;
+}
+#hints{
+  display: none;
 }
 
 #app{
@@ -28,7 +35,7 @@ body{
     bottom: 0;
 }
 
-#guesses li{
+.guess{
   display: inline;
   border: 2px solid;
   border-radius: 15%;
@@ -37,6 +44,17 @@ body{
   margin: 5px;
   text-align: center;
   background-color: white;
+}
+
+#hints li{
+  display: inline;
+  border: 1px solid;
+  border-radius: 15%;
+  font-size: 35px;
+  padding: 2px 15px;
+  margin: 3px;
+  text-align: center;
+  background-color: #b0f7cc;
 }
 
 #player-input, #submit{
@@ -71,11 +89,24 @@ body{
 }
 
 #hint{
-  background-color: #1B5ABB;
+  background-color: #f5f7b0;
   color: white;
 }
 
 #input-parent{
   width: 160px;
   margin: 0 auto;
+}
+
+.burning{
+  background-color: #ff0909;
+}
+.lukewarm{
+  background-color: #ffa500;
+}
+.chilly{
+  background-color: #00ffb8;
+}
+.ice{
+  background-color: #0089ff;
 }
