@@ -62,7 +62,7 @@ $(document).ready(function(){
   var game = newGame();
 
   function setGuesses(){
-    var curList = $("#guesses").find("ul").children("li").first();
+    var curList = $(".guess").first();
     for(var i = 0; i < game.pastGuesses.length; i++){
       curList.text(game.pastGuesses[i]);
       if(i === game.pastGuesses.length - 1){
@@ -82,7 +82,7 @@ $(document).ready(function(){
   }
 
   function resetGuesses(){
-    var guessList = $("#guesses").find("ul").children("li");
+    var guessList = $(".guess");
     guessList.text("-");
     guessList.removeClass("burning");
     guessList.removeClass("lukewarm");
@@ -108,15 +108,10 @@ $(document).ready(function(){
 
   $("#submit").on("click", function(event){
     event.preventDefault();
-    if(game.pastGuesses.length < 5){
-      submitAnswer();
-    }
+    submitAnswer();
     if(game.playersGuess === game.winningNumber || game.pastGuesses.length === 5){
-      //$("#submit").fadeTo('fast', .5);
-      //$("#hint").fadeTo('fast', .5);
       $("#submit").prop("disabled", true);
       $("#hint").prop("disabled", true);
-      //$(".guess").fadeTo('fast', .5);
       $("#hints").slideUp('fast');
       $("#guesses").slideUp('fast');
     }
@@ -131,11 +126,8 @@ $(document).ready(function(){
     $("#hints").slideUp('fast');
     $("#player-input").val("");
     $("#direction").text("Guess a number between 1 and 100!");
-    //$("#submit").fadeTo('fast', 1);
-    //$("#hint").fadeTo("fast", 1);
     $("#submit").prop("disabled", false);
     $("#hint").prop("disabled", false);
-    //$(".guess").fadeTo('fast', 1);
     $("#guesses").slideDown('fast');
   });
 
