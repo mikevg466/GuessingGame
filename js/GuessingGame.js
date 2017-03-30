@@ -96,6 +96,13 @@ $(document).ready(function(){
     var ans = game.playersGuessSubmission(guess);
     ansBlock.text(ans);
     ansBlock.slideDown();
+    if(game.playersGuess < game.winningNumber){
+      $("#direction").text("Guess Higher!");
+    } else if(game.playersGuess > game.winningNumber){
+      $("#direction").text("Guess Lower!");
+    } else{
+      $("#direction").text("Nice!");
+    }
     setGuesses();
   }
 
@@ -103,6 +110,15 @@ $(document).ready(function(){
     event.preventDefault();
     if(game.pastGuesses.length < 5){
       submitAnswer();
+    }
+    if(game.playersGuess === game.winningNumber || game.pastGuesses.length === 5){
+      //$("#submit").fadeTo('fast', .5);
+      //$("#hint").fadeTo('fast', .5);
+      $("#submit").prop("disabled", true);
+      $("#hint").prop("disabled", true);
+      //$(".guess").fadeTo('fast', .5);
+      $("#hints").slideUp('fast');
+      $("#guesses").slideUp('fast');
     }
     $("#player-input").val("");
   });
@@ -114,6 +130,13 @@ $(document).ready(function(){
     $("#answer").slideUp('fast');
     $("#hints").slideUp('fast');
     $("#player-input").val("");
+    $("#direction").text("Guess a number between 1 and 100!");
+    //$("#submit").fadeTo('fast', 1);
+    //$("#hint").fadeTo("fast", 1);
+    $("#submit").prop("disabled", false);
+    $("#hint").prop("disabled", false);
+    //$(".guess").fadeTo('fast', 1);
+    $("#guesses").slideDown('fast');
   });
 
   $("#hint").on("click", function(event){
