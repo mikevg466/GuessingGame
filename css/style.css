@@ -54,7 +54,7 @@ body{
   padding: 2px 15px;
   margin: 3px;
   text-align: center;
-  background-color: #b0f7cc;
+  background-color: #f5f7b0;
 }
 
 #player-input, #submit{
@@ -89,7 +89,7 @@ body{
 }
 
 #hint{
-  background-color: #f5f7b0;
+  background-color: #1B5ABB;
   color: white;
 }
 
